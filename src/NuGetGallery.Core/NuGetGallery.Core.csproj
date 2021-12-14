@@ -59,7 +59,7 @@
   
   <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
     <PackageReference Include="NuGet.Services.Messaging.Email">
-      <Version>2.91.0</Version>
+      <Version>2.94.0-updateMarkdig-5544784</Version>
     </PackageReference>
     <PackageReference Include="NuGet.Services.Validation">
       <Version>2.91.0</Version>
