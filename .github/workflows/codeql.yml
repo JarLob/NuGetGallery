@@ -31,6 +31,7 @@ jobs:
   sync:
     needs: compare
     runs-on: ubuntu-latest
+    if: fromJSON(needs.compare.outputs.result).behind_by > 0 || github.event.inputs.force
 
     steps:
     - uses: actions/checkout@v2
