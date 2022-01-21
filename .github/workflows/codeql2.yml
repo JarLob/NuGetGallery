@@ -23,9 +23,9 @@ jobs:
               const response = await got('${{github.event.workflow_run.artifacts_url}}');
               return JSON.parse(response.body).total_count > 0;
             } catch (error) {
-              console.log(error);
+              console.log(error.response.body);
               throw error;
-            }        
+            }
     
   analyze:
     needs: check
