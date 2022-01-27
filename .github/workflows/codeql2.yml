@@ -30,7 +30,7 @@ jobs:
   analyze:
     needs: check
     if: github.event.workflow_run.conclusion == 'success' && fromJSON(needs.check.outputs.result) == true
-    runs-on: windows-latest
+    runs-on: windows-2019
 
     strategy:
       fail-fast: true
